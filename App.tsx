@@ -5,7 +5,7 @@ import {
 } from "@expo-google-fonts/roboto";
 
 import { Groups } from "@screens/Groups";
-import { ActivityIndicator } from "react-native";
+import { Loading } from "@components/Loading";
 
 import { ThemeProvider } from "styled-components";
 
@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <Groups /> : <ActivityIndicator />}
+      {fontsLoaded ? <Groups /> : <Loading />}
     </ThemeProvider>
   );
 }

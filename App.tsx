@@ -12,6 +12,7 @@ import { Loading } from "@components/Loading";
 import { ThemeProvider } from "styled-components";
 
 import theme from "./src/theme";
+import { Players } from "@screens/Players";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,7 +27,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <NewGroup /> : <Loading />}
+      {fontsLoaded ? <Players /> : <Loading />}
     </ThemeProvider>
   );
 }
